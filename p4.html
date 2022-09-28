@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p4</title>
+    <script>
+        var t=0;
+        function add(frt){
+            if(frt.checked){
+                t+=parseInt(frt.value);
+            }
+            else
+            {
+                t-=parseInt(frt.value);
+            }
+            document.getElementById("res").innerHTML="total is"+t;
+        }
+        function findsum(){
+            var gt=t/100*1.05;
+            alert("the cost is:$"+gt);
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form>
+    <input type="checkbox" name="frt" onclick="add(this)" value="59">Apple<br>
+    <input type="checkbox" name="frt" onclick="add(this)" value="49">Orange<br>
+    <input type="checkbox" name="frt" onclick="add(this)" value="39">Banana<br>
+    <div id="res">$0</div><br>
+    <input type="submit " value="submit " onclick="findsum();">
+</form>
+</body>
+</html>
